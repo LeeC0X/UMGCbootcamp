@@ -25,25 +25,38 @@ body {
   width: 100%;
 }
 
-.meme-text {
-  position: relative;
+.top-text {
+  position: absolute;
+  top: 10%;
   left: 50%;
   width: 100%;
   text-align: center;
-  font-size: 3em;
-  color: blue;
+  font-size: 50px;
+  color: white;
   text-shadow: 3px 3px 5px #000000;
-  transform: translateX(-40%);
+  transform: translate(-50%, -50%);
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  text-shadow: 3px 3px 5px #000000;
+  transform: translate(-50%, -50%);
 }
 
 .top {
-  top: 30px;
+  top: 20px;
 }
 
 .bottom {
-  bottom: 30px;
+  bottom: 10px;
 }
 
-.remove-btn {
+.remove-button {
   margin-top: 15px;
 }
