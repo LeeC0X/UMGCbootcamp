@@ -272,3 +272,35 @@
 //   reversedWord += word[g];
 // }
 // console.log(reversedWord);
+
+function holler() {
+  console.log("HEY YOU!");
+}
+
+const whisper = function () {
+  console.log("pssst I have a secret");
+};
+
+function add(x, y) {
+  return x + y;
+}
+function subtract(x, y) {
+  return x - y;
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+function divide(x, y) {
+  return x / y;
+}
+
+const mathFuncs = [add, subtract, multiply, divide];
+
+function doMath(a, b, mathFunc) {
+  return mathFunc(a, b);
+}
+doMath(3, 4, function (a, b) {
+  console.log(a ** b);
+});
