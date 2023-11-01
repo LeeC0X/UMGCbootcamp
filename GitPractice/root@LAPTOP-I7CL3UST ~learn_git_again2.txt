@@ -1,0 +1,101 @@
+root@LAPTOP-I7CL3UST:~# mkdir learn_git_again
+mkdir: cannot create directory ‘learn_git_again’: File exists
+root@LAPTOP-I7CL3UST:~# mkdir learn_git_again2
+root@LAPTOP-I7CL3UST:~# cd learn_git_again2
+root@LAPTOP-I7CL3UST:~/learn_git_again2# touch third.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /root/learn_git_again2/.git/
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git add third.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git commit -m "adding third.txt"
+[master (root-commit) 4c2b152] adding third.txt
+ Committer: root <root@LAPTOP-I7CL3UST>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git log
+commit 4c2b15210764ec8935817b0ba36a926d51bbe551 (HEAD -> master)
+Author: root <root@LAPTOP-I7CL3UST>
+Date:   Mon Oct 23 22:53:23 2023 -0400
+
+    adding third.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# touch fourth.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git add fourth.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git commit -m "adding fourth.txt"
+[master 177a4ee] adding fourth.txt
+ Committer: root <root@LAPTOP-I7CL3UST>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# rm third.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git add third.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git commit -m "removing third.txt"
+[master aa2b0b1] removing third.txt
+ Committer: root <root@LAPTOP-I7CL3UST>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git log
+commit aa2b0b1cf6b4c7f3cb02c134fbf2f33127658a55 (HEAD -> master)
+Author: root <root@LAPTOP-I7CL3UST>
+Date:   Tue Oct 24 22:12:52 2023 -0400
+
+    removing third.txt
+
+commit 177a4eec1026c66ddb3a4b0cab380a2bb50e3142
+Author: root <root@LAPTOP-I7CL3UST>
+Date:   Tue Oct 24 22:11:38 2023 -0400
+
+    adding fourth.txt
+
+commit 4c2b15210764ec8935817b0ba36a926d51bbe551
+Author: root <root@LAPTOP-I7CL3UST>
+Date:   Mon Oct 23 22:53:23 2023 -0400
+
+    adding third.txt
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git config --global core.pager "cat"
+root@LAPTOP-I7CL3UST:~/learn_git_again2# git config --global --list
+core.pager=cat
+root@LAPTOP-I7CL3UST:~/learn_git_again2#
