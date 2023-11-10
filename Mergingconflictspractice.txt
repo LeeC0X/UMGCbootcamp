@@ -1,0 +1,101 @@
+root@LAPTOP-I7CL3UST:~# echo index_html > index9.html
+root@LAPTOP-I7CL3UST:~# git add index9.html
+root@LAPTOP-I7CL3UST:~# git commit -m "index commit"
+[newbranch 4493ac1] index commit
+ Committer: root <root@LAPTOP-I7CL3UST>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index9.html
+root@LAPTOP-I7CL3UST:~# checkout -b new_branch3
+checkout: command not found
+root@LAPTOP-I7CL3UST:~# git checkout -b newbranch3
+Switched to a new branch 'newbranch3'
+root@LAPTOP-I7CL3UST:~# echo index2_html > index3.html
+root@LAPTOP-I7CL3UST:~# git add index3.html
+root@LAPTOP-I7CL3UST:~# git commit -m "index3 commit"
+[newbranch3 53a4894] index3 commit
+ Committer: root <root@LAPTOP-I7CL3UST>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+root@LAPTOP-I7CL3UST:~# git checkout master
+Switched to branch 'master'
+root@LAPTOP-I7CL3UST:~# echo any_thing > index9.html
+root@LAPTOP-I7CL3UST:~# git add index9.html
+root@LAPTOP-I7CL3UST:~# git commit -m "add anything to master"
+[master 038fb20] add anything to master
+ Committer: root <root@LAPTOP-I7CL3UST>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index9.html
+root@LAPTOP-I7CL3UST:~# git merge newbranch3
+Auto-merging index9.html
+CONFLICT (add/add): Merge conflict in index9.html
+Automatic merge failed; fix conflicts and then commit the result.
+root@LAPTOP-I7CL3UST:~# git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        modified:   index3.html
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      index9.html
+
+root@LAPTOP-I7CL3UST:~# git add index9.html
+root@LAPTOP-I7CL3UST:~# git commit -m "merge into master"
+[master 2f4ce50] merge into master
+ Committer: root <root@LAPTOP-I7CL3UST>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+root@LAPTOP-I7CL3UST:~# git status
+On branch master
+nothing to commit, working tree clean
+root@LAPTOP-I7CL3UST:~# git checkout newbranch3
+Switched to branch 'newbranch3'
+root@LAPTOP-I7CL3UST:~#
