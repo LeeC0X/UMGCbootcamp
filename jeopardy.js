@@ -33,7 +33,6 @@ async function getCategoryIds() {
   const response = await axios.get("https://jservice.io/api/categories", {
     params: { count: 100 },
   });
-
   const NUM_CATEGORIES = response.data.map((c) => c.id);
   return _.sampleSize(NUM_CATEGORIES, 6);
 }
@@ -49,16 +48,11 @@ async function getCategoryIds() {
  *      ...
  *   ]
  */
-
-// {"id":1592,"answer":"Henry Ford","question":"He'd build you a Model T \"in any color, so long as it was black\"","value":100,"airdate":"1984-09-12T19:00:00.000Z","created_at":"2022-12-30T18:38:16.950Z","updated_at":"2022-12-30T18:38:16.950Z","category_id":23,"game_id":177,"invalid_count":null,"category":{"id":23,"title":"automobiles","created_at":"2022-12-30T18:37:38.729Z","updated_at":"2022-12-30T18:37:38.729Z","clues_count":52}}
-
 async function getCategory(catId) {
   const response = await axios.get("https://jservice.io/api/clues", {
     params: { category: catId },
   });
-
   const data = response.data;
-
   const category = {
     title: data[0].category.title,
     clues: data.map((c) => ({
@@ -67,7 +61,6 @@ async function getCategory(catId) {
       showing: null,
     })),
   };
-
   categories.push(category);
   return categories;
 }
@@ -171,6 +164,7 @@ $("#jeopardy").on("click", function (e) {
   setupAndStart();
   $("#jeopardy").text("Restart");
 });
+
 
 // TODO
 

@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 3;
+}
+
+body {
+  background-color: #060ce9;
+  margin: 2em;
+}
+
+#jeopardyTable {
+  background-color: #115ff4;
+  text-align: center;
+  border-collapse: collaspe;
+  color: white;
+  margin: 2em auto;
+  table-layout: fixed;
+}
+
+#jeopardyTable th,
+#jeopardyTable td {
+  border: solid 3px white;
+  width: 250px;
+  padding: 1em;
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+thead {
+  text-transform: uppercase;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  height: 3em;
+  text-shadow: 3px 3px 2px black;
+}
+
+button {
+  display: block;
+  margin: 2em auto;
+  padding: 1em 2.5em;
+  background-color: #74119c;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.loader > span {
+  display: inline-block;
+  background-color: rgb(226, 93, 137);
+  width: 1em;
+  height: 1em;
+  border-radius: 60%;
+  margin: 0 9px;
+  transform: translate3d(0);
+  animation: bounce 0.5s infinite alternate;
+}
+
+.loader > span:nth-child(2) {
+  background-color: palevioletred;
+  animation-delay: 0.2s;
+}
+
+.loader > span:nth-child(3) {
+  background-color: plum;
+  animation-delay: 0.5s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translate3d(0, -16px, 0);
+  }
+}
