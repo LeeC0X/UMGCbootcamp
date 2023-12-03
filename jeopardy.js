@@ -48,7 +48,6 @@ async function getCategoryIds() {
  *      ...
  *   ]
  */
-
 async function getCategory(catId) {
   const response = await axios.get("https://jservice.io/api/clues", {
     params: { category: catId },
@@ -81,6 +80,7 @@ function fillTable() {
   for (let title of categories) {
     $(`<td>${title.title}</td>`).appendTo("#title-section");
   }
+  console.log(title);
 
   for (let y = 0; y < 5; y++) {
     let $clueRow = $(`<tr class = 'clue-row'>`);
@@ -151,14 +151,20 @@ async function setupAndStart() {
   categories = [];
   const catId = await getCategoryIds();
   for (let items of catId) {
-    categories = await getCategoryIds(items);
+    categories = await getCategory(items);
   }
   fillTable();
   hideLoadingView();
 }
 
 /** On click of start / restart button, set up game. */
-$("#restart").on("click", setupAndStart);
+$("#jeopardy").on("click", function (e) {
+  e.preventDefault();
+  showLoadingView();
+  setupAndStart();
+  $("#jeopardy").text("Restart");
+});
+
 
 // TODO
 
