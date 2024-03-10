@@ -8,9 +8,7 @@ def sum_nums(nums):
       10
     """  
 
-    
 
-    
     total = 0 
     for element in range(0,len(nums)):
        total = total + nums[element]
