@@ -6,7 +6,7 @@ In your own terms, define the following terms:
 
 - **What is HTTP?**
    
-    Hyper Text Transfer Protocol witch allows clients to get or set data from or to a server.
+    Hyper Text Transfer Protocol which allows clients to get or set data from or to a server.
 
 - **What is a URL?**
     
@@ -14,7 +14,7 @@ In your own terms, define the following terms:
 
 - **What is DNS?**
     
-    Domain Name System, is a system witch takes URLs's name and converts them into IP addresses.
+    Domain Name System, is a system which takes URLs's name and converts them into IP addresses.
 
 - **What is a query string?**
     
@@ -26,14 +26,14 @@ In your own terms, define the following terms:
 
    The common HTTP verbs are :
  
-   ``GET`` - get some data from the server without any changement on the server
+   ``GET`` - get some data from the server without any changes on the server
  
-   ``POST`` - send some data to the server with data changement on the server
+   ``POST`` - send some data to the server with data changes on the server
 
 
 - **What is an HTTP request?**
 
-    An HTTP request is a request send by a client to a server with the HTTP protocol
+    An HTTP request is a request sent by a client to a server with the HTTP protocol
 
 - **What is an HTTP response?**
     
@@ -45,7 +45,7 @@ In your own terms, define the following terms:
     
 - **What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?**
 
-    The browser convert the name address into an IP address using DNS and makes a request to that IP address.
+    The browser converts the name address into an IP address using DNS and makes a request to that IP address.
     The server sends a response in HTML, the success status code. The browser generate a DOM from that HTML and finds any other resources included.
     The browser makes another HTTP requests for those resources and receives response from the server.
 
